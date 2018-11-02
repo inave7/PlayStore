@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <PreferenceCategory android:title="@string/pref_language_summary" >
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="prefCheckBoxKan"
+        android:title="@string/pref_lang_kannada" >
+    </CheckBoxPreference>
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="prefCheckBoxHin"
+        android:title="@string/pref_lang_hindi" >
+    </CheckBoxPreference>
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:enabled="false"
+        android:key="prefCheckBoxEng"
+        android:title="@string/pref_lang_english" >
+    </CheckBoxPreference>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/pref_notifications" >
+    <SwitchPreference
+        android:title="Sound"
+        android:key="Sound"
+        android:checked="true"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="ABOUT Me - \n An individual, trying to make something out of the time he's got.. \n Contact me  \n i.naveen.prakash@gmail.com \n +91 8884846307"
+        android:icon="@drawable/about_us">
+
+    </PreferenceCategory>
+
+
+    <Preference
+        android:key="done_btn_ref"
+        android:icon="@android:drawable/alert_light_frame"
+        android:title="DONE"></Preference>
+
+
+
+
+
+</PreferenceScreen>

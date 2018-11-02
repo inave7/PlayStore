@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "551980056603",
+    "firebase_url": "https://dialogue-ac643.firebaseio.com",
+    "project_id": "dialogue-ac643",
+    "storage_bucket": "dialogue-ac643.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:551980056603:android:6206283f6121d727",
+        "android_client_info": {
+          "package_name": "com.belaku.dialogue"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "551980056603-8rdl4bgu75seav8skjvr9fv6cq9gt5hp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCC7u4JGfeFRoxcyvizT0qLg0luSWoesmQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

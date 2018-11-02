@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.belaku.naveenprakash.streetMap.MainActivity">
+
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+
+    <TextView
+        android:id="@+id/tx_place_details"
+        android:text="Place Details . . ."
+        android:layout_margin="@dimen/fab_margin"
+        android:textStyle="italic|bold"
+        android:textSize="25sp"
+        android:visibility="invisible"
+        android:textColor="@android:color/darker_gray"
+        android:typeface="serif"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <fragment
+        android:id="@+id/streetviewpanorama"
+        class="com.google.android.gms.maps.SupportStreetViewPanoramaFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+
+
+    <Spinner
+        android:id="@+id/nearest_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@android:drawable/dialog_holo_light_frame"
+        android:visibility="invisible"></Spinner>
+
+    <RadioGroup
+        android:id="@+id/rg_views"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@android:drawable/dialog_holo_light_frame"
+        android:orientation="horizontal"
+        android:visibility="invisible">
+
+        <RadioButton
+            android:id="@+id/rb_dark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dark"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/rb_light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Light"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/rb_retro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Retro"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+
+    </RadioGroup>
+
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-6424332507659067/8532012249"></com.google.android.gms.ads.AdView>
+    <!--test - ca-app-pub-3940256099942544/6300978111
+        actual - ca-app-pub-6424332507659067/8532012249-->
+
+    <ImageButton
+        android:id="@+id/img_btn_directions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/streetviewpanorama"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/fab_margin"
+        android:background="@android:color/black"
+        android:src="@android:drawable/ic_menu_directions"
+        android:visibility="invisible" />
+
+    <fragment
+        android:id="@+id/place_autocomplete_fragment"
+        android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_go"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/btn_go"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/adView"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/btn_bckgrnd"
+        android:text="Go.."
+        android:textColor="@android:color/black"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btn_tut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/street_icon_smallsize"
+        android:text=" ? "
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:visibility="invisible" />
+
+
+    <include layout="@layout/content_fab" />
+
+</RelativeLayout>
+

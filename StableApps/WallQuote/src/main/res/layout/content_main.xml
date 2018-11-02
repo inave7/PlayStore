@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.belaku.dialogue.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+
+    <ProgressBar
+        android:id="@+id/pb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminateDrawable="@drawable/my_wheel" />
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-6424332507659067/6055905255">
+    </com.google.android.gms.ads.AdView>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_share"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fab_save"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:layout_alignStart="@+id/fab_save"
+        app:backgroundTint="@android:color/transparent"
+        app:borderWidth="0dp"
+        app:srcCompat="@android:drawable/ic_menu_share" />
+
+    <TextView
+        android:id="@+id/tx_fabshare"
+        android:text="Share"
+        android:visibility="invisible"
+        android:background="@drawable/rounded_corner"
+        android:layout_above="@+id/fab_share"
+        android:layout_alignLeft="@+id/fab_share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/set_wall"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/adView"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:layout_marginLeft="@dimen/fab_margin"
+        android:layout_marginRight="@dimen/fab_margin"
+        android:layout_toEndOf="@+id/fab_favorites"
+        app:backgroundTint="@android:color/transparent"
+        app:borderWidth="0dp"
+        app:srcCompat="@drawable/set_wall" />
+
+    <TextView
+        android:id="@+id/tx_fabsetwall"
+        android:text="SetWall"
+        android:visibility="invisible"
+        android:background="@drawable/rounded_corner"
+        android:layout_above="@+id/set_wall"
+        android:layout_alignLeft="@+id/set_wall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/adView"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:layout_marginLeft="@dimen/fab_margin"
+        android:layout_marginRight="@dimen/fab_margin"
+        app:backgroundTint="@android:color/transparent"
+        app:borderWidth="0dp"
+        app:srcCompat="@drawable/icon" />
+
+    <TextView
+        android:id="@+id/tx_fab"
+        android:text="Options"
+        android:visibility="invisible"
+        android:background="@drawable/rounded_corner"
+        android:layout_above="@+id/fab"
+        android:layout_alignLeft="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_save"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tx_fab"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/fab_margin"
+        app:backgroundTint="@android:color/transparent"
+        app:borderWidth="0dp"
+        app:srcCompat="@drawable/save" />
+
+    <TextView
+        android:id="@+id/tx_fab_save"
+        android:text="Save"
+        android:visibility="invisible"
+        android:background="@drawable/rounded_corner"
+        android:layout_above="@+id/fab_save"
+        android:layout_alignLeft="@+id/fab_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_settings"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tx_fab_favorites"
+        android:layout_marginLeft="@dimen/fab_margin"
+        android:layout_toRightOf="@+id/fab"
+        app:backgroundTint="@android:color/transparent"
+        app:borderWidth="0dp"
+        app:srcCompat="@drawable/settings" />
+
+    <TextView
+        android:id="@+id/tx_fab_settings"
+        android:text="Settings"
+        android:visibility="invisible"
+        android:background="@drawable/rounded_corner"
+        android:layout_above="@+id/fab_settings"
+        android:layout_alignLeft="@+id/fab_settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_favorites"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/adView"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:layout_marginLeft="@dimen/fab_margin"
+        android:layout_marginRight="@dimen/fab_margin"
+        android:layout_toRightOf="@+id/fab"
+        app:backgroundTint="@android:color/transparent"
+        app:borderWidth="0dp"
+        app:srcCompat="@drawable/favorites" />
+
+    <TextView
+        android:id="@+id/tx_fab_favorites"
+        android:text="Favorites"
+        android:visibility="invisible"
+        android:background="@drawable/rounded_corner"
+        android:layout_above="@+id/fab_favorites"
+        android:layout_alignLeft="@+id/fab_favorites"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/about_us" />
+
+    <com.adroitandroid.chipcloud.ChipCloud
+        android:id="@+id/chip_cloud"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <Button
+        android:id="@+id/done_topics"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@color/dark_grey"
+        android:layout_below="@+id/chip_cloud"
+        android:text="Done"
+        android:textColor="@color/light_grey"/>
+
+    <TextView
+        android:id="@+id/tx_quote"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/chip_cloud"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textColor="#000"
+        android:textSize="@dimen/tx_quote"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tx_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fab_settings"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/chip_cloud"
+        android:layout_marginEnd="51dp"
+        android:gravity="center"
+        android:text="Hang On !"
+        android:textColor="#000"
+        android:textSize="@dimen/tx_author"
+        android:textStyle="bold" />
+
+
+
+</RelativeLayout>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_r_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.belaku.naveenprakash.streetMap.NavigationActivity"
+    tools:showIn="@layout/activity_navigation">
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_go"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginRight="11dp"
+        android:background="@android:color/holo_red_light"
+        app:srcCompat="@android:drawable/ic_menu_directions" />
+
+    <fragment
+        android:id="@+id/place_autocomplete_fragment_from"
+        android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/holo_red_light"
+        android:layout_below="@+id/place_autocomplete_fragment_from"/>
+
+    <fragment
+        android:id="@+id/place_autocomplete_fragment_to"
+        android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line" />
+
+
+
+    <Spinner
+        android:id="@+id/spinner_transport_mode"
+        android:background="@android:color/holo_red_light"
+        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/place_autocomplete_fragment_to"
+        android:layout_height="50dp"
+        android:entries="@array/Transport_mode"
+        android:prompt="@string/go_via" />
+
+    <TextView
+        android:id="@+id/tx_sun"
+        android:layout_toLeftOf="@+id/spinner_transport_mode"
+        android:layout_below="@+id/place_autocomplete_fragment_to"
+        android:layout_height="50dp"
+        android:layout_width="wrap_content"
+        android:text="SUN"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:background="@android:color/holo_blue_light"/>
+
+    <TextView
+        android:id="@+id/tx_sat"
+        android:layout_toLeftOf="@+id/tx_sun"
+        android:layout_below="@+id/place_autocomplete_fragment_to"
+        android:layout_height="50dp"
+        android:layout_width="wrap_content"
+        android:text="SAT"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:background="@android:color/holo_green_light"/>
+
+    <TextView
+        android:id="@+id/tx_fri"
+        android:layout_toLeftOf="@+id/tx_sat"
+        android:layout_below="@+id/place_autocomplete_fragment_to"
+        android:layout_height="50dp"
+        android:layout_width="wrap_content"
+        android:text="FRI"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:background="@android:color/holo_orange_light"/>
+
+    <TextView
+        android:id="@+id/tx_thu"
+        android:layout_toLeftOf="@+id/tx_fri"
+        android:layout_below="@+id/place_autocomplete_fragment_to"
+        android:layout_height="50dp"
+        android:layout_width="wrap_content"
+        android:text="THU"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:background="@android:color/holo_purple"/>
+
+    <TextView
+        android:id="@+id/tx_wed"
+        android:layout_toLeftOf="@+id/tx_thu"
+        android:layout_below="@+id/place_autocomplete_fragment_to"
+        android:layout_height="50dp"
+        android:layout_width="wrap_content"
+        android:text="WED"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:background="@android:color/holo_red_light"/>
+
+    <TextView
+        android:id="@+id/tx_tue"
+        android:layout_toLeftOf="@+id/tx_wed"
+        android:layout_below="@+id/place_autocomplete_fragment_to"
+        android:layout_height="50dp"
+        android:layout_width="wrap_content"
+        android:text="TUE"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:background="@android:color/holo_blue_dark"/>
+
+    <TextView
+        android:id="@+id/tx_mon"
+        android:layout_toLeftOf="@+id/tx_tue"
+        android:layout_below="@+id/place_autocomplete_fragment_to"
+        android:layout_height="50dp"
+        android:layout_width="wrap_content"
+        android:text="MON"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:background="@android:color/darker_gray"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tx_mon"
+        android:text="next week ..."
+        />
+
+
+    <com.jjoe64.graphview.GraphView
+        android:layout_height="150dip"
+        android:layout_width="match_parent"
+        android:id="@+id/graph"
+        android:background="@android:color/background_light"
+        android:layout_below="@+id/spinner_transport_mode"
+        />
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/graph" />
+
+
+</RelativeLayout>

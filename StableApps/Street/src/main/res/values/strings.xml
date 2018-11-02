@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Street</string>
+    <string name="action_settings">Settings</string>
+    <string name="dev_name"> <i> <b>- Naveen Prakash</b> </i> </string>
+    <string name="next">Next</string>
+    <string name="skip">Skip</string>
+    <string name="start">Start</string>
+    <string name="title_activity_navigation">NavigationActivity</string>
+    <string name="go_via">Go VIA</string>
+
+
+    <string-array name="Transport_mode">
+        <item>Go VIA</item>
+        <item>DRIVE</item>
+        <item>BUS</item>
+        <item>RIDE</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
